@@ -1,4 +1,4 @@
-# weather-app
+# Weather-app
 
 This is my first project, a simple weather app inspired by iOS weather app, created using HTML, CSS, JavaScript, and the OpenWeather API.
 
