@@ -18,3 +18,7 @@ This is my first project, a simple weather app inspired by iOS weather app, crea
 
 1. Enter the location for which you want to check the weather.
 2. Enjoy real-time weather updates!
+
+## Credits
+
+OpenWeather API (https://openweathermap.org/)
