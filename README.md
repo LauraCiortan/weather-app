@@ -14,6 +14,10 @@ This is my first project, a simple weather app inspired by iOS weather app, crea
 - JavaScript
 - OpenWeather API
 
+## Open the weather app here:
+
+https://lauraciortan.github.io/weather-app/
+
 ## Usage
 
 1. Enter the location for which you want to check the weather.
