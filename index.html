@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    
+
+</head>
+<body>
+    <div class="phone-image">
+        <nav>
+            <div class="nav-container">
+                <span class="time nav" id="time">15:33</span>
+                <div class="menu nav">
+                    <ul>
+                        <li>
+                            <a class="github" href="https://github.com/LauraCiortan" target="_blank">
+                            <img src="images/github-mark-white.svg" alt="github logo" width="30px" height="30px">
+                            </a>
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="app">
+                <div class="header">
+                    <h3 class="location" id="location">Stockholm</h3>
+                    <h1 class="temperature" id="temperature">-6°</h1>
+                    <h4 id="description">Light snow</h4>
+                    <div class="low-high">
+                        <h4 class="low" id="low">L: -10°C</span>
+                        <h4 class="high" id="high">H: 0°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sunrise-sunset">
+            <h4>SUNRISE & SUNSET</h4>
+            <div class="today-sunrise-sunset">
+                <div class="forecast-item">
+                    <span class="timeOfDay">Sunrise</span>
+                    <span class="icon"><img src="images/Sunrise.png" alt="sunrise"></span>
+                    <span class="time" id="sunrise">10:00</span>
+                </div>
+                <div class="forecast-item">
+                    <span class="timeOfDay">Sunset</span>
+                    <span class="icon"><img src="images/Sunset.png" alt="sunset"></span>
+                    <span class="time" id="sunset">19:00</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="additional-details">
+            <h4>ADDITIONAL DETAILS</h4>
+            <div class="three-additional-details">
+                <span class="details">Feels like</span>
+                    <div class="flex">
+                        <img src="images/Thermometer.png" alt="">
+                    </div>
+                <span class="description" id="feelsLike">-10°C</span>
+            </div>
+
+            <div class="three-additional-details">
+                <span class="details">Humidity</span>
+                    <div class="flex">
+                        <img src="images/Dew Point.png" alt="">
+                    </div>
+                <span class="description" id="humidity">10%</span>
+            </div>
+
+            <div class="three-additional-details">
+                <span class="details">Pressure</span>
+                <div class="flex">
+                    <img src="images/Pressure Gauge.png" alt="">
+                </div>
+                    <span class="description" id="pressure">987 hPa</span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="form">
+                <input placeholder="Search another city" spellcheck="false" id="locationInput">
+                <button type="submit" class="submit" id="searchButton">Search</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
