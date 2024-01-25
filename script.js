@@ -20,10 +20,11 @@ searchButton.addEventListener('click', () => {
     const location = locationInput.value;
     if (location) {
         fetchWeather(location);
-        locationInput.value = ''; // Clear the input field
+        locationInput.value = ''; // Clear the input field after a search
     }
 });
 
+// Function to fetch weather data
 function fetchWeather(location) {
     const url = `${apiUrl}?q=${location}&appid=${apiKey}&units=metric`;
 
@@ -32,7 +33,7 @@ function fetchWeather(location) {
         .then(data => {
             locationElement.textContent = data.name;
             temperatureElement.textContent = `${Math.round(data.main.temp)}°`;
-            descriptionElement.textContent = data.weather[0].description;
+            descriptionElement.textContent = data.weather[0].main;
             lowTemperature.textContent = 'L: ' + `${Math.round(data.main.temp_min)}°`;
             highTemperature.textContent = 'H: ' + `${Math.round(data.main.temp_max)}°`;
             feelsLike.textContent = `${Math.round(data.main.feels_like)}°`;
@@ -48,9 +49,46 @@ function fetchWeather(location) {
             const formattedSunsetTime = sunsetTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
             
             sunset.textContent = formattedSunsetTime;
+
+            updateBackground(data.weather[0].main);
             
         })
         .catch(error => {
             console.error('Error fetching weather data:', error);
         });
 }
+
+// Function to update background image based on weather
+function updateBackground(weatherCondition) {
+    const phoneImage = document.querySelector('.phone-image');
+
+    //Remove previous searched weather background before changing to new weather background
+    phoneImage.classList.remove('clear-weather', 'cloudy-weather', 'rainy-weather', 'snow-weather', 'thunderstorm-weather', 'drizzle-weather', 'fog-weather');
+  
+    switch (weatherCondition) {
+        case 'Clear':
+            phoneImage.classList.add('clear-weather');
+            break;
+        case 'Rain':
+            phoneImage.classList.add('rainy-weather');
+            break;
+        case 'Clouds':
+            phoneImage.classList.add('cloudy-weather');
+        break;
+        case 'Snow':
+            phoneImage.classList.add('snow-weather');
+        break;
+        case 'Thunderstorm':
+            phoneImage.classList.add('thunderstorm-weather');
+        break;
+        case 'Drizzle':
+            phoneImage.classList.add('drizzle-weather');
+        break;
+        case 'Fog':
+            phoneImage.classList.add('fog-weather');
+        break;
+
+      default:
+        body.style.backgroundImage = 'url("default-image.jpg")';
+    }
+  }

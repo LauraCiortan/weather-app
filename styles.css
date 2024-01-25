@@ -53,7 +53,9 @@ h4 {
     overflow-y: scroll;
     overflow-x: hidden;
     box-shadow: 500px 0px 77px 100px rgba(0, 0, 0, 0.1), -500px 0px 77px 100px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(#bcc2cb, #808891);
+    /*background: linear-gradient(#bcc2cb, #808891);*/
+    background-image: url('images/fog.jpg');
+    background-size: 100% 100%;
 }
 
 div {
@@ -244,5 +246,45 @@ input {
     align-items: center;
 }
 
+.clear-weather {
+    background-image: url('images/clear.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
 
+.rainy-weather {
+    background-image: url('images/rain.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.cloudy-weather {
+    background-image: url('images/clouds.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.snow-weather {
+    background-image: url('images/snow.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.thunderstorm-weather {
+    background-image: url('images/thunderstorm.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.drizzle-weather {
+    background-image: url('images/drizzle.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.fog-weather {
+    background-image: url('images/fog.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
 
